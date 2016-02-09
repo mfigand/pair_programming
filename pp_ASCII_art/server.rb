@@ -7,9 +7,10 @@ enable(:sessions)
 
 # end
 
-get "/ascii/:insert" do#convert the word to ASCII and then print it out
+get "/ascii/:insert/:font" do#convert the word to ASCII and then print it out
   insert = params[:insert]
-  @a = Artii::Base.new :font => 'slant'
+  @font = params[:font]
+  @a = Artii::Base.new :font => @font
   @word = @a.asciify(insert)
   erb(:word)
 end
