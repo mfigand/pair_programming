@@ -1,0 +1,25 @@
+<!-- views/add.erb -->
+
+<html>
+<head>
+  <title>Sinatra Blog</title>
+</head>
+<body>
+  
+<% @postArray.each_with_index do |post, index| %>
+  <a href="/post_details/:postNum"><%= post.title %></a>
+<% end %>
+  
+
+
+ <!--  <form action="/calculate" method="POST">
+
+    <label for="first">First number to sum</label>
+      <input type="number" id="first" name="first" placeholder="0">
+
+    <button type="submit" name="btn" value="add">add</button>
+  </form>
+ -->
+
+</body>
+</html>
